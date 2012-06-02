@@ -1,0 +1,24 @@
+# Place any notes or comments you have here
+# It will make any customisation easier to understand in the weeks to come
+
+# domain: iec.ac.id
+# public: /home/ivanchen/Project/iec-web
+
+<virtualhost *:80>
+
+# Admin email, Server Name (domain name) and any aliases
+ServerAdmin webmaster@iec.ac.id
+ServerName  iec.ac.id
+ServerAlias iec.ac.id
+
+
+# Index file and Document Root (where the public files are located)
+DirectoryIndex index.php
+DocumentRoot /home/ivanchen/Project/iec-web
+
+# Custom log file locations
+LogLevel warn
+ErrorLog  /home/ivanchen/Project/iec-web/log/error.log
+CustomLog /home/ivanchen/Project/iec-web/log/access.log combined
+
+</virtualhost>

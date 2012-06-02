@@ -1,0 +1,11 @@
+copy file iec.ac.id => /etc/apache2/sites-available/
+buka file pke perintah dan jalankan=> sudo gedit iec.ac.id dari terminal, lalu ganti DocumentRoot menjadi lokasi project kalian.. selesai, lalu save
+ketik perintah dan jalankan => sudo a2ensite iec.ac.id
+lalu ketik perintah dan jalankan => sudo service apache2 reload
+
+sekarang buka file pke perintah dan jalankan=> sudo gedit /etc/hosts
+tambahkan dibawah localhost, 127.0.0.1 iec.ac.id
+
+DONE!
+
+kalo ada masalah, kasih tau ja.. thanks..
