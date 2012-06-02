@@ -1,0 +1,49 @@
+1.  Edit file 'hosts' di C:\windows\system32\drivers\etc\
+Buat kalo memang gk ada, ingat nama file 'hosts' tanpa extensi
+
+Tambahkan di paling bawah file
+127.0.0.1 iec.ac.id
+
+NOTE:
+Untuk edit file system windows,
+pake Notepad, klik kanan > Run as administrator
+open file, edit trus save.
+
+2.  Edit file 'httpd-vhosts.conf' di (directory xampp)\apache\conf\extra\
+
+Tambahkan di paling bawah file
+<VirtualHost *:80>
+    DocumentRoot /xampp/htdocs
+    ServerName localhost
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerName iec.ac.id
+    DocumentRoot /xampp/htdocs/iec-web
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride All
+    </Directory>
+    <Directory /xampp/htdocs/websitebaker>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
+
+Hapus comment pada
+##NameVirtualHost *:80
+menjadi
+NameVirtualHost *:80
+
+NOTE:
+Ingat ganti 'iec-web' pada
+DocumentRoot /xampp/htdocs/iec-web
+dengan directory kalian.
+
+3. Restart apache, sekian terima kasih.
