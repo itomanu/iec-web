@@ -1,0 +1,11 @@
+note:
+1. to anyone who'd like parameterize constraints of scheme db_iecweb, here the query:
+select * from information_schema.table_constraints
+where constraint_schema = 'db_iecweb'
+2. untuk penamaan primary key, nama constraintnya digenerate langsung sm my sql dengan nama primary, perlu effort lg untuk ngapdet primarynya, but please with my pleasure, here the query:
+update information_schema.table_constraints set constraint_name = '' 
+where constraint_schema = 'db_iecweb' and table_name='' and constraint_type='primary'
+3. untuk tipe field timestamp digenerate langsung ama mysql saat ngebentuk tabel punya constraint not null
+4. ID dari tb_POST_Types belum ada SOPnya jadi gw buat contoh sederhana aja.
+
+

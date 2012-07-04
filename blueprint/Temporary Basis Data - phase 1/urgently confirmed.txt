@@ -1,0 +1,15 @@
+<reconfirm queue to MR. Toyba Rumengan>
+tb_Users -> Kenapa User_Picture type field = varchar 255 bukan blob?
+tb_Users -> kenapa User_CreatedAt type field = Date bukan Timestamp?
+tb_Posts -> Post_Picture == Varchar(255)?
+tb_Posts -> Post_Picture == Primary Key?
+tb_Posts -> sebenarnya Primarynya ada berapa?
+(sementara gw ikutin yang di ERD)
+tb_Post_types -> Ptyp_ID -> belum ada sopnya arus gemana...?, klo nga ada pake auto inc aja....
+tb_Posts -> nga ada pencatatan User_ID, ato kelupaan?
+tb_Posts -> gw cuma bisa ngasih contoh untuk yang vote_type->notasi
+klo yang kuning ma merah gw masih belum bisa ngebayangin penggunaannya.
+
+
+Jovi
+DB Develope Member IECWEB
