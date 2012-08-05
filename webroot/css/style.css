@@ -24,6 +24,18 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
 body {
 	line-height: 1;
 }
@@ -44,7 +56,13 @@ table {
 	border-spacing: 0;
 }
 
+a{
+    text-decoration: none;
+    color: #A60000;
+}
+
 html{
+    min-height:100%;
     background-color: #EAEAEA;
 background-size: 13px 13px, 29px 29px, 37px 37px, 53px 53px;
 background-image: -webkit-linear-gradient(0, rgba(255,255,255,.07) 50%, transparent 50%),
@@ -81,25 +99,128 @@ padding:0;
 font-size:14px;
 margin:0px auto auto auto;
 color:#000000;
+min-height: 100%;
+height: auto;
 }
 
 #wrap{
-width:1000px;
-height: 3000px;
-margin:auto;
-background-color:#FEFEFE;
-border-bottom: 1px solid #565656;
-box-shadow: 0pt 0pt 12px rgb(153, 153, 153);
+width: 100%;
+margin: auto;
+/*padding: 50px 0 0 0;*/
+/*background-color:#FEFEFE;*/
+/*border-bottom: 1px solid #565656;*/
+/*box-shadow: 0pt 0pt 12px rgb(153, 153, 153);*/
+}
+
+#left_menu{
+    min-height: 100%;
+    padding: 60px 10px 10px;
+    background-color: white;
+    width: 150px;
+    z-index:1;
+    -moz-box-shadow: 0pt 2pt 3px #AAAAAA;
+    -webkit-box-shadow: 0pt 2pt 3px #AAAAAA;
+    -o-box-shadow: 0pt 2pt 3px #AAAAAA;
+    box-shadow: 0pt 2pt 3px #AAAAAA;
+    position: fixed !important;
+}
+
+#left_menu .menu_button{
+    display:block;
+    padding:20px;
+    border-bottom: 2px solid lightgrey;
+}
+
+#right_content{
+    min-height: 100%;
+    width: 800px;
+    margin: 100px 100px 0 0px;
+    padding: 20px;
+    background-color: white;
+    -moz-box-shadow: 0pt 2pt 3px #AAAAAA;
+    -webkit-box-shadow: 0pt 2pt 3px #AAAAAA;
+    -o-box-shadow: 0pt 2pt 3px #AAAAAA;
+    box-shadow: 0pt 2pt 3px #AAAAAA;
+}
+
+#right_content li.comment_field{
+    display: block;
+    border-left: 8px solid #A60000 !important;
+    border: 1px solid #ccc;
+    height: auto;
+    padding: 20px;
+    -moz-box-shadow: 0pt 2pt 3px #ccc;
+    -webkit-box-shadow: 0pt 2pt 3px #ccc;
+    -o-box-shadow: 0pt 2pt 3px #ccc;
+    box-shadow: 0pt 2pt 3px #ccc;
+}
+.content_comment{
+    height: auto;
+}
+
+.pp-64{
+    height: 64px;
+    width: 64px;
 }
 
 #menu{
 width: 100%;
-height: 40px;
-background: url('../img/menu.jpg');
-background: -webkit-gradient(linear, left top, left bottom, from(#5e5e5e), to(#6D6D6D)); /* for webkit browsers */
-background: -moz-linear-gradient(top,  #5E5E5E,  #6D6D6D);
-box-shadow: 0pt 0pt 12px rgb(153, 153, 153);
-position: fixed !important;
-z-index: 128;
-border-bottom: 1px solid #707070;
+    min-width: 1000px;
+    height: 40px;
+    background-size: 5px 5px;
+    background-color: #A60000;
+    background-image: -webkit-linear-gradient(-45deg, rgba(77, 0, 0, .2) 25%, transparent 25%,
+        transparent 50%, rgba(77, 0, 0, .2) 50%, rgba(77, 0, 0, .2) 75%,
+        transparent 75%, transparent);
+    background-image: -moz-linear-gradient(-45deg, rgba(77, 0, 0, .2) 25%, transparent 25%,
+        transparent 50%, rgba(77, 0, 0, .2) 50%, rgba(77, 0, 0, .2) 75%,
+        transparent 75%, transparent);
+    background-image: -ms-linear-gradient(-45deg, rgba(77, 0, 0, .2) 25%, transparent 25%,
+        transparent 50%, rgba(77, 0, 0, .2) 50%, rgba(77, 0, 0, .2) 75%,
+        transparent 75%, transparent);
+    background-image: -o-linear-gradient(-45deg, rgba(77, 0, 0, .2) 25%, transparent 25%,
+        transparent 50%, rgba(77, 0, 0, .2) 50%, rgba(77, 0, 0, .2) 75%,
+        transparent 75%, transparent);
+    background-image: linear-gradient(-45deg, rgba(77, 0, 0, .2) 25%, transparent 25%,
+        transparent 50%, rgba(77, 0, 0, .2) 50%, rgba(77, 0, 0, .2) 75%,
+        transparent 75%, transparent);
+    -pie-background: gradient(-45deg, rgba(77, 0, 0, .2) 25%, transparent 25%,
+        transparent 50%, rgba(77, 0, 0, .2) 50%, rgba(77, 0, 0, .2) 75%,
+        transparent 75%, transparent) 0 0 / 5px 5px, #A60000;
+    behavior: url(/PIE.htc);
+    -moz-box-shadow: 0pt 2pt 3px #AAAAAA;
+    -webkit-box-shadow: 0pt 2pt 3px #AAAAAA;
+    -o-box-shadow: 0pt 2pt 3px #AAAAAA;
+    box-shadow: 0pt 2pt 3px #AAAAAA;
+    position: fixed !important;
+    z-index: 1024;
+    border-bottom: 1px solid #707070;
+}
+
+#menu .navigation{
+    margin: auto;
+    width: 99%;
+    min-width:1000px;
+    color: white;
+    font-weight: bold;
+}
+
+#menu .navigation ul li{
+    float: left;
+    padding: 0px 7px;
+    margin: 13px 0px;
+    border-right: 1px solid grey;
+    font-size: 15px;
+}
+
+#menu .navigation ul li.end{
+    border: none;
+}
+
+#menu .navigation a{
+    color: #ABABAB;
+}
+
+#menu .navigation a:hover{
+    color: white;
 }
