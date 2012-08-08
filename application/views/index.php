@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="/webroot/css/style.css" />
-        <link rel="stylesheet" href="/webroot/css/blitzer/jquery-ui-1.8.21.custom.css" />
+        <link rel="stylesheet" type="text/css" href="webroot/css/style.css" />
+        <link rel="stylesheet" href="webroot/css/blitzer/jquery-ui-1.8.21.custom.css" />
 
-        <script src="/webroot/js/jquery-1.7.2.min.js"></script>
-        <script src="/webroot/js/jquery-ui-1.8.21.custom.min.js"></script>
+        <script src="webroot/js/jquery-1.7.2.min.js"></script>
+        <script src="webroot/js/jquery-ui-1.8.21.custom.min.js"></script>
         
         <title>
             IEC sites
@@ -51,7 +51,7 @@
                         <li class="comment_field">
                             <div class="content_comment">
                                 <div class="left">
-                                    <img class="pp-64" src="/webroot/img/def.png"/> 
+                                    <img class="pp-64" src="webroot/img/def.png"/> 
                                 </div>
                                 <div class="left">
                                     NAMA YANG KOMENT
