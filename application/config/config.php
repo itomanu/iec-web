@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://iec.ac.id/';
+$config['base_url']	= 'http://localhost/iec-web';
 
 /*
 |--------------------------------------------------------------------------
