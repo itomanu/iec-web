@@ -1,32 +1,34 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+class User extends CI_Model {
+    public $table_name = "tb_users";
 
-class User extends CI_Model{
-    public $table_name = "albums";
-    
-    function __construct(){
+    function __construct() {
         parent::__construct();
     }
-     
-    public function validate(){
-        // grab user input
-        $username = $this->security->xss_clean($this->input->post('username'));
-        $password = $this->security->xss_clean($this->input->post('password'));
-         
-        // Prep the query
-        $this->db->where('User_ID', $username);
-        $this->db->where('User_Password', $password);
-         
+
+    /**
+     * Get user who is logged in
+     */
+    public function current_user() {
+        
+    }
+    
+    /**
+     * Validate user id and password for login
+     */
+    public function validate() {
+        // Grap input and check it with xss clean
+        $this->db->where('User_ID', $this->input->post('user_id'));
+        $this->db->where('User_Password', md5($this->input->post('password')));
+
         // Run the query
         $query = $this->db->get($this->table_name);
-        // Let's check if there are any results
-        if($query->num_rows == 1)
-        {
-            $row = $query->row();
+
+        if ($query->num_rows == 1) {
             return true;
         }
-        // If the previous process did not validate
-        // then return false.
+
         return false;
     }
 }

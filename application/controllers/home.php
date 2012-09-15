@@ -1,21 +1,12 @@
-<?php
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-if (!defined('BASEPATH'))
-    exit('No direct script access allowed');
-
-class Landing extends CI_Controller {
-
-    function __construct() {
-
-        parent::__construct();
-    }
-
+class Home extends CI_Controller {
     public function index() {
-
-        $this->load->view('home/index');
+        $user_id =  $this->session->userdata('user_id');
+        if (isset($user_id) && $user_id != null) {
+            $this->load->view('home/index');
+        } else {
+            redirect('');
+        }
     }
-
-    
-
 }
-
