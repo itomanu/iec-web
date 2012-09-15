@@ -20,7 +20,7 @@ class User extends CI_Model {
     public function validate() {
         // Grap input and check it with xss clean
         $this->db->where('User_ID', $this->input->post('user_id'));
-        $this->db->where('User_Password', md5($this->input->post('password')));
+        $this->db->where('User_Passwords', md5($this->input->post('password')));
 
         // Run the query
         $query = $this->db->get($this->table_name);
