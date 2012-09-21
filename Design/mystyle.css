@@ -1,0 +1,113 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	background-color: #F8F8F8;
+	font-family:Lucida Grande,Helvetica,sans-serif;
+	font-size: 14px;
+	line-height: 1.28;
+	margin: auto;
+	width: 960px;
+}
+
+#header
+{
+	height: 90px;
+	width: 960px;
+	margin: auto; 
+}
+
+#header a img
+{
+	margin: 5px;
+}
+
+#center
+{
+	background-image: url('image/sky-road.jpg');
+	background-repeat: no-repeat;
+	height: 400px;
+	margin: auto;
+	-moz-box-shadow: 0px 0px 15px #888888;
+	box-shadow: 0px 0px 15px #888888;
+	border-top: 1px solid #B1B1B1;
+	border-bottom: 2px solid #B1B1B1;
+}
+
+#content
+{
+	margin: auto;
+	width: 960px;
+	height: 399px;
+}
+
+.form-login
+{
+	width: 265px;
+	height: 250px;
+	float: right;
+	margin-top: 130px;
+	font-weight: bold;
+}
+
+#menu_bottom
+{
+	width: 642px;
+	margin: 7px auto -6px auto;
+}
+
+#menu_bottom ul
+{
+	list-style-type: none;
+	margin: 5px auto 0px auto;
+	padding: 0px;
+}
+
+#menu_bottom ul li
+{
+	display: inline-block;
+	margin: 0px 1px;
+	text-align: center;
+}
+
+#menu_bottom ul li a
+{
+	text-decoration: none;
+	display: block;
+	width: 150px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	color: black;
+}
+
+#menu_bottom ul li a:hover
+{
+	display: inline-block;
+	box-shadow: inset 0 0 20px #9A9A9A;
+	text-decoration: none;
+}
+
+#footer
+{
+	width: 960px;
+	margin-top: 0px auto 0px auto;
+	/*border-top: 1px solid #B1B1B1;
+	-moz-box-shadow: 0px -5px 15px #DDDDDD;
+	box-shadow: 0px -8px 15px #DDDDDD;*/
+	background-image: url(image/footer.png);
+	background-repeat: repeat-x
+}
+
+#footer p
+{
+	margin: 0px 0px 0px 10px;
+	padding-top: 20px;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#footer p a
+{
+	color: black;
+	text-decoration: none;
+}
